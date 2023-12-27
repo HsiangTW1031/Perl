@@ -1,0 +1,5 @@
+From the host application console output, it is clear that the FPGA accelerated kernel can outperform CPU-only implementation by a factor of 68x.
+It is a large gain in terms of performance over CPU.
+The following labs will illustrate how this performance allows processing more than three HD video channels with 1080p resolution in parallel.
+The tutorial describes how to achieve such performance gains by building a kernel and host application written in C++.
+The host application uses OpenCL™ APIs and Xilinx Runtime (XRT) underneath it, demonstrating how to unleash this custom-built hardware kernel's computing power effectively.
