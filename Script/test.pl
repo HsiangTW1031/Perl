@@ -174,13 +174,12 @@ third: ^<<<< # 左邊對齊，字符長度為5，taobao 最後一個 o 被截斷
 write
 
 # -------------------------------------------------------------------- #
-# -------------------------- Perl 文件操作 -------------------------- #
+# -------------------------- Perl 文件操作 ---------------------------- #
 # -------------------------------------------------------------------- #
 say "\n文件操作 example.";
 # 打開文件
 my $filename = 'BBC_news.txt';
 open my $file, '<', $filename or die "Can't open '$filename': $!";
-# 這個寫法也可以 : open my $file, "<$filename" or die "Can't open '$filename': $!";
 
 # 行數計數器
 my $line_number = 1;
@@ -198,6 +197,13 @@ while(my $line = <$file>){
 
     $line_number++;
 }
+
+# 關閉文件
+close $file;
+
+say "\n文件輸出 example.";
+# 打開文件
+open my $file, "<$filename" or die "Can't open '$filename': $!";   # 這個寫法也可以
 
 while(<$file>){
    print "$_";
