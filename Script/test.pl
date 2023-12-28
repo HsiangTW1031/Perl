@@ -198,7 +198,12 @@ while(my $line = <$file>){
 
     $line_number++;
 }
+# 關閉文件
+close $file;
 
+
+say "\n輸出文件內容 example.";
+open my $file, "<$filename" or die "Can't open '$filename': $!";
 while(<$file>){
    print "$_";
 }
